@@ -62,7 +62,7 @@ export const ImageGallery = () => {
   }, [currentIndex]);
 
   return (
-    <View className="flex h-full w-full">
+    <View className="flex h-2/6">
       <FlatList
         ref={flatListRef}
         data={imageGallery}
@@ -73,7 +73,7 @@ export const ImageGallery = () => {
         showsHorizontalScrollIndicator={false}
         onScroll={handleOnScroll}
       />
-      <View className="absolute bottom-5 w-full">
+      <View className="absolute bottom-10 w-full">
         <SliderPagination pageNumber={imageGallery.length} scrollX={scrollX} />
       </View>
     </View>
